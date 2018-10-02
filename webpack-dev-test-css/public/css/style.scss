@@ -1,0 +1,11 @@
+@mixin bg-image($img, $text-color) {
+    background-image:$img;
+    color:$text-color;
+}
+
+$img: url(/img/glass-3691734_1920.jpg);
+$text-color: white;
+
+.header-image {
+    @include bg-image($img, $text-color);
+}

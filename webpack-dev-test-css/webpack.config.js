@@ -6,7 +6,7 @@ module.exports = {
     mode: 'development',
     entry:['@babel/polyfill','./source/client.js'],
     output: {
-        path: '/Users/taka/Desktop/helloworld/',
+        path: '/tmp/dist',
         filename: 'index.js'
     },
     devServer:{

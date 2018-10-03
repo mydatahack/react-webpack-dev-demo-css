@@ -15,6 +15,16 @@ npm start
 npm run-script build
 ```
 
+### Workaround for CSS backgroud image
+
+In /tmp/dist/app.css, the slash before image url(/img/...) needs to be removed after build.
+
+```
+.header-image {
+  background-image: url(img/glass-3691734_1920.jpg);
+  color: white; }
+```
+
 ### Packages
 
 Dev Dependencies

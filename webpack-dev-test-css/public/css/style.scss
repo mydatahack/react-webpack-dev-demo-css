@@ -3,9 +3,51 @@
     color:$text-color;
 }
 
+@mixin row-highlight($height, $border) {
+    height:$height;
+    border: $border;
+    margin-bottom: 40px;
+}
+
 $img: url(/img/glass-3691734_1920.jpg);
 $text-color: white;
 
 .header-image {
     @include bg-image($img, $text-color);
+}
+
+$height: 150px;
+$border1: 2px dotted blue;
+$border2: 2px dotted yellow;
+$border3: 2px dotted pink;
+
+.row-highlight {
+    @include row-highlight($height, $border3)
+}
+
+.header-appear {
+    opacity:0.05;
+
+    &-active {
+        opacity:1;
+        transition: opacity 500ms ease-in;
+    }
+}
+
+.button-enter {
+    opacity:0.01;
+
+    &-active{
+        opacity:1;
+        transition: opacity 1s ease-in;
+    }
+}
+
+.button-leave {
+    opacity:1;
+
+    &-active {
+        opacity:0;
+        transition: opacity 50ms ease-out;
+    }
 }
